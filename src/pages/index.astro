@@ -6,140 +6,198 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Københavnerbilleder">
-	<article>
-		<section>
-			<div>
-				<img src="https://picsum.photos/768/320" alt="img">
+	<article class="mx-4">
+		<section id="top">
+			<div class="max-w-[768px] max-h-[320px] overflow-hidden mb-4">
+				<img src="/kobenhavnerbilleder-sten-simons.webp" alt="img" class="rounded object-cover w-full h-full">
 			</div>
 			<div>
-				<h1>Index overskrift</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				<Button>Klik!</Button>
-			</div>
-		</section>
-
-		<section class="mt-20">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</section>
-
-		<section class="mt-20">
-			<img src="https://picsum.photos/768/320" alt="">
-			<img src="https://picsum.photos/768/320" alt="">
-			<img src="https://picsum.photos/768/320" alt="">
-		</section>
-
-		<section class="mt-20">
-			<h2>Lorem Ipsum</h2>
-			<div>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<h1 class="text-xl text-red-800 font-bold mb-2">Københavnerbilleder<br/>- en guide til hipster foto</h1>
+				<p class="text-base text-stone-900 mb-2">af Sten Simons</p>
+				<Button variant="primary" size="small"><a href="#kapitler">Læs mere</a></Button>
 			</div>
 		</section>
 
-		<section>
-			<h2>Lorem Ipsum</h2>
+		<section class="mt-8 mb-2 text-base text-stone-900">
+			<p class="mb-6">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog.
+				Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter.
+				Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+
+			<p>Titel: Københavnerbilleder - en guide til hipster foto<br/>
+				Forfatter: Sten Simons<br/>
+				Antal sider: 344<br/>
+				Forlag: Mellem Linjerne<br/>
+				ISBN: 987-6-987654-32-1<br/>
+				Pris: 399.-
+			</p>
+		</section>
+
+		<section class="mt-8 mb-2 grid grid-flow-row gap-4">
+			<img src="/kobenhavnerbilleder-sten-simons.webp" alt="Forside af bogen" class="rounded">
+			<img src="/kobenhavnerbilleder_oppefra.webp" alt="Bogen oppe fra vinkel" class="rounded">
+			<img src="/kobenhavnerbilleder_aaben_venstre.webp" alt="Bogen fra en åben venstre vinkel" class="rounded">
+		</section>
+
+		<section id="kapitler" class="mt-8 mb-2">
+			<h2 class="text-lg text-red-700 font-bold mb-2">Bogens kapitler</h2>
 			<div>
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 1 - Intro til street foto</h3>
+				<p class="mb-6">Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry).
+					I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer.
+					Alt krydret med en masse gode eksempler på street fotos.</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 2 - Om at skyde street</h3>
+				<p class="mb-6">Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det!
+					I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel,
+					er der mange gode tekniske tips og tricks til street-skyderiet.</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 3 - Om at finde det rette motiv</h3>
+				<p class="mb-6">Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver.
+					Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 4 - Digital street foto</h3>
+				<p class="mb-6">De fleste af os skyder oftest digitalt fordi det er billigere og nemmere.
+					Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto.
+					I dette kapitel får du en række tips og tricks til digital street-foto.</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 5 - Analog street foto</h3>
+				<p class="mb-6">Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme.
+					Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto.
+					I dette kapitel får du en række tips og tricks til analog street-foto.</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 6 - Om at skyde sort/hvid</h3>
+				<p class="mb-6">Alle street-fotografer skyder sort/hvid nu og da. Nogen altid.
+					Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering?
+					Her får du en række tips og tricks til sort/hvid fotografering.</p>
+				
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 7 - Kreative teknikker</h3>
+				<p class="mb-6">Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre,
+					spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde
+					kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+
+				<h3 class="text-base text-stone-900 font-bold mb-2">Kapitel 8 - Kom helt tæt på!</h3>
+				<p class="mb-6">Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker
+					og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
+			</div>
+		</section>
+
+		<section class="mt-8 mb-2">
+			<h2 class="text-lg text-red-700 font-bold mb-2">Anmeldelser af bogen</h2>
 			<div>
-				<div>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
+				<div class="mt-4 mb-6">
+					<div class="flex justify-center mb-2">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+					<p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant.
+						Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder,
+						 er der masser af tips og tricks i bogen.<br/>
+						 - Hanne Hovgaard, Berlingeren</p>
 				</div>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div>
-				<div>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
+					<div class="mt-4 mb-6">
+						<div class="flex justify-center mb-2">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+						<p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?<br/>
+							- Kim Kloggaard, Fotojournalen.dk</p>
+					</div>
+				<div class="mt-4 mb-6">
+					<div class="flex justify-center mb-2">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(248 113 113)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-stone-500">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+						</svg>
+					</div>
+					<p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste -
+						her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.”
+						Tillykke - godt arbejde.<br/>
+						- Volmer Hansen, Lukkertiden.dk</p>
 				</div>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div>
-				<div>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-				</svg>
-				</div>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
 			</div>
 		</section>
 
-		<section>
-			<h3>Lorem</h3>
-			<div>
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
-				<img src="https://picsum.photos/768/320" alt="">
+		<section class="mt-8 mb-2">
+			<h3 class="text-base text-stone-900 font-bold mb-2">Galleri</h3>
+			<div class="flex flex-wrap">
+				<img src="/1_orestad-til-islands-brygge-pentax-auto-110-16.webp" alt="Ørestad til Islands Brygge1" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/2_orestad-til-islands-brygge-pentax-auto-110-24.webp" alt="Ørestad til Island Brygge2" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/3_orestad-til-islands-brygge-pentax-auto-110-19.webp" alt="Ørestad til Island Brygge3" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/4_vinter-2021-med-lomo-smena-6.webp" alt="Vinter 2021-1" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/5_vinter-2021-med-lomo-smena-17.webp" alt="Vinter 2012-2" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/6__6090016.webp" alt="Bil ved havn" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/7_kbh-by-night-3.webp" alt="KBH by at night" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/8_foraar-med-et-agfa-lebox-2-20.webp" alt="foraar-med-et-ag" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/9_lomo-smena-15.webp" alt="Træer" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/10_orestad-til-islands-brygge-pentax-auto-110-14.webp" alt="Ørestad til Island Brygge4" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/11_agfa-genanvendeligt-kamera-35mm-5.webp" alt="Natur vs by" class="w-full lg:w-1/2 rounded mb-4">
+				<img src="/12__6090022.webp" alt="Urban scene" class="w-full lg:w-1/2 rounded mb-4">
 			</div>
 		</section>
 
-		<section class="mt-20">
+		<section id="forfatter" class="mt-8 mb-2">
 			<div>
-				<h3>Lorem</h3>
-				<img src="https://picsum.photos/768/320" alt="">
+				<h3>Forfatteren</h3>
+				<img src="/sten_simons.webp" alt="Billede af Sten Simons">
 			</div>
 			<div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne,
+					da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger,
+					og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+					<b/>
+					Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet
+					“Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger,
+					herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
 			</div>
 		</section>
 
-		<section class="mt-20">
+		<section id="formular" class="mt-20">
 			<h3>Lorem</h3>
 			<form action="#" method="post">
 				<label for="antal">Antal:</label>

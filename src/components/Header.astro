@@ -1,31 +1,31 @@
 ---
 
 ---
-<div class="flex justify-between items-center mx-4 py-4 relative">
+<div class="flex justify-between items-center mx-4 py-4">
     <!--   md:w-32 md:mx-16 md:bg-green-400 lg:bg-red-300 -->
-    <a href="/" class="active"><img src="/logo.svg" alt="Sten Simons Logo" class="w-12 h-auto"></a>
+    <a href="/" class="active"><img src="/logo.svg" alt="Sten Simons Logo" class="w-12 h-auto hover:bg-[url('logo_hover.svg')] hover:bg-no-repeat hover:bg-contain"></a>
     
          <!-- "Hamburger menu" -->
     <div class="w-8 cursor-pointer space-y-1 lg:hidden" id="burger">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-slate-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-stone-900">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </div>
-    
+
     <!-- Navigation links -->
-    <nav class="hidden absolute top-12 w-full left-0 flex-col lg:flex lg:static lg:bg-transparent" id="menu">
-        <ul class="list-none lg:flex lg:flex-row">
-            <li class="my-2">
-                    <a href="#id" class=" text-black px-14 py-16 rounded no-underline text-base hover:bg-gray-100 hover:underline">Nav 1</a>
+    <nav class="hidden absolute top-20 w-full h-48 right-0 flex-col content-center text-end border-t-2 border-stone-700 bg-stone-100 lg:flex lg:static lg:bg-transparent animate__animated animate__slideInDown" id="menu">
+        <ul class="list-none px-4 py-4 lg:flex lg:flex-row">
+            <li class="pb-2">
+                    <a href="#top" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700 hover:">Københavnerbilleder</a>
             </li>
-            <li class="my-2">
-                    <a href="#" class=" text-black px-14 py-16 rounded no-underline text-base hover:bg-gray-100 hover:underline">Nav 2</a>
+            <li class="pb-2">
+                    <a href="#kapitler" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Bogens indhold</a>
             </li>
-            <li class="my-2">
-                    <a href="#" class=" text-black px-14 py-16 rounded no-underline text-base  hover:bg-gray-100 hover:underline">Nav 3</a>
+            <li class="pb-2">
+                    <a href="#forfatter" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Forfatteren</a>
             </li>
-            <li class="my-2">
-                    <a href="#" class=" text-black px-14 py-16 rounded no-underline text-base hover:bg-gray-100 hover:underline">Nav 4</a>
+            <li class="pb-2">
+                    <a href="#formular" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Køb nu</a>
             </li>
         </ul>
     </nav>
@@ -34,8 +34,15 @@
 <script>
     const burger = document.getElementById('burger');
     const menu = document.getElementById('menu');
+    const links = document.querySelectorAll('#menu a');
 
     burger.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
+
+    links.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+    });
+});
 </script>

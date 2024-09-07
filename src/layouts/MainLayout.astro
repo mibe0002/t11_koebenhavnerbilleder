@@ -6,19 +6,19 @@ import 'animate.css';
 const { title } = Astro.props;
 ---
 <html lang="da">
-	<head class="">
+	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
 	</head>
 	<body>
-		<header class="mt-0 mb-8 ">
+		<header class="mt-0 bg-stone-100 sticky top-0 z-50">
 			<Header></Header>
 		</header>
 		
-		<main>
+		<main class="bg-stone-50">
 			<slot/>
 		</main>
 
