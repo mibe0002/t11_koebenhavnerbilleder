@@ -3,7 +3,7 @@
 const { variant= "primary", size = "medium" } = Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
-const buttonStyling = "rounded border-[1.5px] duration-300 ease-in-out"; 
+const buttonStyling = "rounded border-[1.5px] transition duration-300 ease-in-out"; 
 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
@@ -21,4 +21,4 @@ const sizeClasses = {
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class="mb-2 lg:w-[224px] lg:mb-6 lg:items-center" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot/></button>
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "mb-2 lg:w-[224px] lg:mb-6 hover:flicker-5"]}><slot/></button>

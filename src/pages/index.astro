@@ -8,10 +8,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Københavnerbilleder">
 	<article class="mx-4 lg:mx-24">
 		<section id="top" class="lg:justify-center lg:gap-x-12 lg:grid lg:grid-cols-2">
-			<div class="max-w-[768px] lg:max-w-full min-h-[320px] overflow-hidden mb-4">
+			<div class="max-w-[768px] lg:max-w-full min-h-[320px] overflow-hidden mb-4 my-8">
 				<img src="/kobenhavnerbilleder-sten-simons.webp" alt="img" class="rounded object-cover w-full h-full">
 			</div>
-			<div>
+			<div class="lg:my-8">
 				<h1 class="text-xl lg:text-3xl text-red-800 font-bold mb-2 lg:mb-8">Københavnerbilleder<br/>- en guide til hipster foto</h1>
 				<p class="text-base lg:text-xl text-stone-900 mb-2 lg:mb-6">af Sten Simons</p>
 				<Button variant="primary" size="small"><a href="#kapitler">Læs mere</a></Button>
@@ -244,7 +244,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 			</div>
 		</section>
 
-		<section id="formular" class="my-8 lg:my-24 text-base lg:text-xl text-stone-900 max-w-m">
+		<section id="formular" class="text-base lg:text-xl text-stone-900 max-w-m">
 			
 			<form name="koeb_bog" method="post" class="grid grid-cols-1 gap-2 max-w-md mx-auto" data-netlify="true">
 				<h3 class="text-base lg:text-xl text-stone-900 font-bold mb-6 lg:mb-18">Køb Københavnerbilleder nu!</h3>
@@ -306,11 +306,12 @@ import thumbsup from "../assets/images/thumbsup.png";
 				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
 
 				<div class="flex gap-4 items-center mb-4">
-				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev"></input>
+				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" class="ml-2 rounded border-stone-300 shadow-sm
+					focus:border-red-300 focus:ring focus:ring-red-200/50 hover:bg-red-300 focus:bg-red-700 checked:bg-red-700"></input>
 				<label for="nyhedsbrev">Hold dig opdateret vha. vores nyhedsbrev!</label>
 				</div>
 				
-				<div class="lg:flex lg:justify-end">
+				<div class="my-8 lg:flex lg:justify-end">
 				<Button variant="primary" size="small"><input type="submit" value="Fortsæt"></Button>
 				</div>
 			</form>

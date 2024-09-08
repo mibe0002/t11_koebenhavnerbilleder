@@ -14,15 +14,15 @@ const { title } = Astro.props;
 		<title>{Astro.props.title}</title>
 	</head>
 	<body>
-		<header class="mt-0 bg-stone-100 sticky top-0 z-50">
+		<header class="bg-stone-100 sticky top-0 z-50">
 			<Header></Header>
 		</header>
 		
-		<main class="bg-stone-50 my-4">
+		<main class="bg-stone-50">
 			<slot/>
 		</main>
 
-		<footer class="mb-0 bg-stone-100">
+		<footer class="bg-stone-100">
 			<Footer></Footer>
 		</footer>
 	</body>
