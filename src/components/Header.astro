@@ -1,31 +1,35 @@
 ---
-
+import Link from "./Link.astro"
 ---
-<div class="flex justify-between items-center mx-4 py-4">
-    <!--   md:w-32 md:mx-16 md:bg-green-400 lg:bg-red-300 -->
-    <a href="/" class="active"><img src="/logo.svg" alt="Sten Simons Logo" class="w-12 h-auto hover:bg-[url('logo_hover.svg')] hover:bg-no-repeat hover:bg-contain"></a>
+<div class="flex justify-between items-center mx-4 py-4 lg:mx-12 lg-py-12 lg:gap-36 lg:justify-around">
+    <a href="/" class="active"><img src="/logo.svg" alt="Sten Simons Logo" class="w-12 h-auto hover:bg-[url('logo_hover.svg')] hover:bg-no-repeat hover:bg-contain lg:w-36"></a>
     
          <!-- "Hamburger menu" -->
-    <div class="w-8 cursor-pointer space-y-1 lg:hidden" id="burger">
+    <div class="w-8 space-y-1 lg:hidden" id="burger">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-stone-900">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </div>
 
     <!-- Navigation links -->
-    <nav class="hidden absolute top-20 w-full h-48 right-0 flex-col content-center text-end border-t-2 border-stone-300 bg-stone-100 lg:flex lg:static lg:bg-transparent animate__animated animate__slideInDown" id="menu">
-        <ul class="list-none px-4 py-4 lg:flex lg:flex-row">
+    <nav class="hidden absolute top-20 w-full h-48 right-0 flex-col content-center text-end border-t-2 border-stone-300 bg-stone-100
+    lg:relative lg:flex lg:border-none lg:bg-transparent animate__animated animate__slideInDown" id="menu">
+        <ul class="list-none px-4 py-4 lg:flex lg:flex-row lg:justify-end lg:gap-4 lg:text-xl lg:items-center">
             <li class="pb-2">
-                    <a href="#top" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700 hover:">Københavnerbilleder</a>
+                <Link href="#top" variant="primary" size="large" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Københavnerbilleder</Link>
             </li>
+
             <li class="pb-2">
-                    <a href="#kapitler" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Bogens indhold</a>
+                <Link href="#kapitler" variant="primary" size="large" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Bogens indhold</Link>
             </li>
-            <li class="pb-2">
-                    <a href="#forfatter" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Forfatteren</a>
+
+                <li class="pb-2">
+                <Link href="#forfatter" variant="primary" size="large" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Forfatteren</Link>
             </li>
-            <li class="pb-2">
-                    <a href="#formular" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Køb nu</a>
+
+           </li>
+                <li class="pb-2">
+                <Link href="#formular" variant="primary" size="large" class="text-stone-900 no-underline text-base hover:underline hover:underline-offset-4 hover:decoration-1 hover:decoration-red-700">Køb nu</Link>
             </li>
         </ul>
     </nav>
