@@ -21,4 +21,6 @@ const sizeClasses = {
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class="mb-2 lg:mb-6 lg:float-right" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot/></button>
+<div class="lg:flex lg:justify-end">
+<button class="mb-2 lg:w-[224px] lg:mb-6 lg:items-center" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot/></button>
+</div>
